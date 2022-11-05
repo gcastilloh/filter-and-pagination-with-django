@@ -7,6 +7,10 @@
 django-admin startproject mysite .
 django-admin startapp myapp
 
+# template tags
+
+[How to create custom template tags and filters](https://docs.djangoproject.com/en/4.1/howto/custom-template-tags/)
+
 # el comando populate
 
 ```

@@ -7,6 +7,7 @@
     <title>Show All products page</title>
 </head>
 <body>
+    {% load myapp_extras %}
 
     <form method="get">
         {{ filtered_products.form.as_p}}
@@ -15,8 +16,8 @@
 
     <span class="step-links">
         {% if product_page_obj.has_previous %}
-            <a href="?page=1">&laquo;First</a>
-            <a href="?page={{ product_page_obj.previous_page_number}}"> Previus</a>
+            <a href="{%my_url 1 'page' request.GET.urlencode %}">&laquo;First</a>
+            <a href="{%my_url product_page_obj.previous_page_number 'page' request.GET.urlencode %}">Previous</a>
         {% endif %}
         
         <span class="current">
@@ -24,8 +25,8 @@
         </span>
         
         {% if product_page_obj.has_next %}
-            <a href="?page={{ product_page_obj.next_page_number}}"> Next</a>
-            <a href="?page={{ product_page_obj.paginator.num_pages}}">&raquo;Last</a>
+            <a href="{%my_url product_page_obj.next_page_number 'page' request.GET.urlencode %}"> Next</a>
+            <a href="{%my_url product_page_obj.paginator.num_pages 'page' request.GET.urlencode %}">&raquo;Last</a>
         {% endif %}
 
     </span>
@@ -38,24 +39,6 @@
             {{product.price}} <br>
         </h2>
     {% endfor %}
-
-    <div>
-        <span class="step-links">
-            {% if product_page_obj.has_previous %}
-                <a href="?page=1">&laquo;First</a>
-                <a href="?page={{ product_page_obj.previus_page_number}}"> Previus</a>
-            {% endif %}
-            
-            <span class="current">
-                Page {{product_page_obj.page}} of {{product_page_obj.paginator.num_pages}}
-            </span>
-            
-            {% if product_page_obj.has_next %}
-                <a href="?page={{ product_page_obj.next_page_number}}"> Next</a>
-                <a href="?page={{ product_page_obj.paginator.num_pages}}">&raquo;Last</a>
-            {% endif %}
-
-        </span>
 
     </div>
     
