@@ -10,7 +10,8 @@ django-admin startapp myapp
 # template tags
 
 [How to create custom template tags and filters](https://docs.djangoproject.com/en/4.1/howto/custom-template-tags/)
-
+[How to Filter QuerySets Dynamically](https://simpleisbetterthancomplex.com/tutorial/2016/11/28/how-to-filter-querysets-dynamically.html)
+[Welcome to django-autocomplete-light’s documentation!](https://django-autocomplete-light.readthedocs.io/en/master/index.html)
 # el comando populate
 
 ```

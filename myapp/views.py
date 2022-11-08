@@ -11,7 +11,7 @@ def show_all_products_page(request):
     context = {}
     filtered_products = ProductFilter(
         request.GET,
-        queryset=Product.objects.all(),
+        queryset=Product.objects.order_by('id'),
     )
 
     context['filtered_products'] = filtered_products
