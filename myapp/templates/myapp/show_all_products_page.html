@@ -32,10 +32,9 @@
 
     {% for product in product_page_obj%}
         <h2>
-            {{product.id}}  <br>
-            {{product.title}} <br>
-            {{product.description}} <br>
-            {{product.price}} <br>
+            title: {{product.title}} <br>
+            description: {{product.description}} <br>
+            price: {{product.price}} <br>
         </h2>
     {% endfor %}
 
