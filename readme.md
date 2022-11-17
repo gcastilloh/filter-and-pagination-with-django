@@ -3,9 +3,10 @@
 [Django filter And Pagination](https://www.youtube.com/watch?v=dkJ3uqkdCcY&ab_channel=TauhidCodes)
 
 # iniciaclización de django
-
+```
 django-admin startproject mysite .
 django-admin startapp myapp
+```
 
 # el comando populate
 
